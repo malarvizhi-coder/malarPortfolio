@@ -32,17 +32,33 @@ ul{
     list-style: none;
 }
 .section{
-    /* min-height: 100vh; */
+    min-height: 100vh;
     background-color: var(--bg-black-900);
     display: block;
-    /* position: fixed;
-    top: 0;
-    right: 0;
-    left:270px;
-    z-index: 0; */
     opacity: 1;
     padding: 0 30px;
+    /* position:fixed;
+    left:270px;
+    top: 0;
+    right: 0;
+    bottom: 0; */
+    z-index: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
+.section.active{
+    z-index: 2;
+    opacity: 1;
+    /* animation: slideSection 1s ease; */
+}
+/* @keyframes slideSection{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+} */
 .hidden{
     display: none !important;
 }
@@ -148,7 +164,8 @@ ul{
 }
 .aside .logo a span{
     font-family: 'Beau Rivage', cursive;
-    font-size: 40px;
+    font-size: 50px;
+    font-weight: 700;
     color: var(--skin-color);
 }
 .aside .logo a::before{
@@ -249,12 +266,12 @@ ul{
     max-width: 60%;
 }
 h3.hello{
-    font-size: 38px;
+    font-size: 40px;
     margin: 10px 0;
 }
 h3.hello span{
-    font-family: 'Beau Rivage', cursive;
-    font-size: 50px;
+    /* font-family: 'Beau Rivage', cursive; */
+    font-size: 40px;
     font-weight: 700;
     color: var(--skin-color);
     letter-spacing: 5px;
@@ -273,9 +290,12 @@ h3.my-profession{
     color: var(--skin-color);
 }
 .home-info p{
-    margin-bottom: 70px;
-    font-size: 16px;
+    width: 90%;
+    margin: 25px 0;
+    font-size: 14px;
     color: var(--text-black-700);
+    line-height: 35px;
+    text-align: justify;
 }
 .home .home-img img {
     height: 400px;
@@ -638,13 +658,41 @@ h3.my-profession{
     height: 50px;
     padding: 0 50px;
 }
+.footer{
+    height: 35px;
+    padding: 5px 0;
+    background-color: var(--bg-black-50);
+}
+.footer-content{
+    text-align: center;
+    font-size: 14px;
+    color: grey;
+    font-weight: 400;
+}
 
 @media (max-width:1199px){
     .home{
         min-height: fit-content;
+        padding-top: 55px;
     }
     .aside{
         left: -270px;
+    }
+    .aside.open{
+        left: 0;
+    }
+    .aside .nav-toggler{
+        display: flex;
+        left: 30px;
+    }
+    .aside .nav-toggler.open{
+        left: 300px;
+    }
+    .section{
+        left: 0;
+    }
+    .section.open{
+        left: 270px;
     }
     .main-content{
         padding-left: 0;
