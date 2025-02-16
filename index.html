@@ -7,6 +7,8 @@
     <!-- CSS Files -->
      <link rel="stylesheet" href="css/style.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+     <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
+
      <!-- Style Switcher CSS files -->
      <link rel="stylesheet" href="css/style-switcher.css">
      <link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1" >
@@ -14,6 +16,7 @@
      <link rel="stylesheet" href="css/skins/color-3.css" class="alternate-style" title="color-3" disabled>
      <link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
      <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
+
 </head>
 <body class="dark">
     <!-- Main Container Start -->
@@ -120,7 +123,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="buttons padd-15">
-                                            <a href="#" class="btn">Download CV</a>
+                                            <a target="_blank" href="https://drive.google.com/file/d/1Q2LeKR7eDAbypT-hWJeDj2ntzkx9k7V3/view?usp=drive_link" class="btn">Download CV</a>
                                             <a href="#contact" class="btn hire-me">Let's Talk</a>
                                         </div>
                                     </div>
@@ -486,7 +489,7 @@
                         <div class="contact-info-item padd-15">
                             <div class="icon"><i class="fa fa-globe-europe"></i></div>
                             <h4>Website</h4>
-                            <p>www.malar.com</p>
+                            <a target="_blank" href="https://malarvizhi-coder.github.io/malarPortfolio/"><p>Click here to visit..!</p></a>
                          </div>
                         <!-- Contact info item end -->
                     </div>
@@ -494,45 +497,52 @@
                     <h3 class="contact-title padd-15">Send me an Email</h3>
                     <h4 class="contact-sub-title padd-15">Ready to start your project? Fill out the form below, and I'll get back to you ASAP!</h4>
                     <!-- Contact Form start -->
-                     <div class="row">
-                        <div class="contact-form padd-15">
-                            <div class="row">
-                                <div class="form-item col-6 padd-15">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Name">
+                     <div>
+                        <form action="#" class="email-form" id="contact-form">
+                            <div class="contact-form padd-15">
+                                <div class="row">
+                                    <div class="form-item col-6 padd-15">
+                                        <div class="form-group">
+                                            <input type="text" name="name" class="input-control" placeholder="Name">
+                                        </div>
+                                    </div>
+                                    <div class="form-item col-6 padd-15">
+                                        <div class="form-group">
+                                            <input type="email" name="email" class="input-control" placeholder="Email">
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="form-item col-6 padd-15">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Email">
+    
+                                <div class="row">
+                                    <div class="form-item col-12 padd-15">
+                                        <div class="form-group">
+                                            <input type="text" name="subject" class="input-control" placeholder="Subject">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+    
+                                <div class="row">
+                                    <div class="form-item col-12 padd-15">
+                                        <div class="form-group">
+                                            <textarea type="text" name="message" class="input-control" placeholder="Message"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
 
-                            <div class="row">
-                                <div class="form-item col-12 padd-15">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Subject">
+                                <div class="row">
+                                    <div class="form-item col-12 padd-15">
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-submit">Submit</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="form-item col-12 padd-15">
-                                    <div class="form-group">
-                                        <textarea type="text" class="form-control" placeholder="Message"></textarea>
-                                    </div>
+                                <div class="loader">
+                                    <i class="lni lni-spinner-3"></i>
                                 </div>
+                                <div class="form-message"></div>
                             </div>
-
-                            <div class="row">
-                                <div class="form-item col-12 padd-15">
-                                    <div class="form-group">
-                                        <button type="submit" class="btn">Send Message</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </form>
+                        
                      </div>
                     <!-- Contact Form end -->
 
@@ -572,6 +582,7 @@
     <!-- Footer Section End -->
     
     <!-- JS Files -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
      <script src="js/script.js"></script>
      <script src="js/style-switcher.js"></script>

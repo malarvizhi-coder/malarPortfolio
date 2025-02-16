@@ -60,3 +60,33 @@ function asideSectionTogglerButton(){
     aside.classList.toggle("open");
     navTogglerBtn.classList.toggle("open");
 }
+
+//form submission 
+(function() {
+    // https://dashboard.emailjs.com/admin/account
+    emailjs.init({
+      publicKey: "L15141wr24I3uPMVE",
+    });
+})();
+
+const msg = document.querySelector(".form-message")
+
+window.onload = function() {
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        document.querySelector(".loader").classList.add("show");
+        emailjs.sendForm("service_f7oatl4", "template_12kcruq", this).then(
+            function(){
+                document.getElementById("contact-form").reset();
+                document.querySelector(".loader").classList.remove("show");
+                msg.innerHTML = "";
+                msg.innerHTML += "<span class='success-msg'>Email Sent</span>";
+                msg.classList.add("show");
+                setTimeout(()=> msg.classList.remove("show"),2000);
+            },
+            (error) => {
+                console.log('FAILED...', error);
+            });
+    });
+}
+//loader
